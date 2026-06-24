@@ -13,7 +13,8 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                        <img src="assets/images/logo.png" alt="Ganesh Commercial Institute Logo" class="logo-img">
+                        <img src="assets/file.png" alt="Ganesh Commercial Institute Logo" class="logo-img">
+                        <h3>Ganesh Commercial Institute</h3>
                 </a>
             </div>
             <ul class="nav-links">
@@ -42,28 +43,31 @@
                     <p>Fill out the form below, and it will generate an email draft instantly.</p>
                     
                     <form id="contact-query-form">
+                        <input type="hidden" name="access_key" value="6ae4e587-e60e-43a6-a4c0-945f6ed6a80e">
+
                         <div class="form-group">
                             <label for="user-name">Full Name</label>
-                            <input type="text" id="user-name" required maxlength="50" placeholder="Enter your full name" >
+                            <input type="text" id="user-name" name="name" required maxlength="50" placeholder="Enter your full name" >
                         </div>
 
                         <div class="form-group">
                             <label for="user-phone">Phone Number</label>
-                            <input type="tel" id="user-phone" required maxlength="10" pattern="[0-9]{10}" placeholder="Enter 10-digit mobile number">
+                            <input type="tel" id="user-phone" name="phone" required maxlength="10" pattern="[0-9]{10}" placeholder="Enter 10-digit mobile number">
                         </div>
 
                         <div class="form-group">
                             <label for="user-email">Email ID</label>
-                            <input type="email" id="user-email" required maxlength="100" placeholder="name@example.com">
+                            <input type="email" id="user-email" name="email" required maxlength="100" placeholder="name@example.com">
                         </div>
 
                         <div class="form-group">
                             <label for="user-message">Your Message</label>
-                            <textarea id="user-message" rows="5" required maxlength="1000" placeholder="Type your query here..."></textarea>
+                            <textarea id="user-message" name="message" rows="5" required maxlength="1000" placeholder="Type your query here..."></textarea>
                         </div>
 
-                        <button type="submit" class="contact-submit-btn">Send Message</button>
+                        <button type="submit" class="contact-submit-btn" id="submit-btn-text">Send Message</button>
                     </form>
+                    <div id="form-feedback" style="margin-top: 1.5rem; font-weight: 600; text-align: center; font-family: sans-serif;"></div>
                 </div>
 
                 <div class="contact-info-block">
@@ -75,7 +79,7 @@
                             Royapuram, Chennai, Tamil Nadu 600013
                         </p>
                         <p><strong>Phone:</strong> <a href="tel:+919381282777" style="color: var(--blue);">+91 93812 82777</a></p>
-                        <p><strong>Email:</strong> <a href="mailto:ssanjaykumar3040gmail.com" style="color: var(--blue);">info@ganeshinstitute.com</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:ssanjaykumar3040@gmail.com" style="color: var(--blue);">info@ganeshinstitute.com</a></p>
                     </div>
 
                     <div class="map-wrapper">
@@ -109,7 +113,7 @@
         </div>
     </footer>
 
-    <script>
+    <!--<script>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('contact-query-form');
             
@@ -140,6 +144,60 @@
 
                     // Fire the mailto redirection sequence
                     window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
+                });
+            }
+        });
+    </script>-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contact-query-form');
+            const feedback = document.getElementById('form-feedback');
+            const submitBtn = document.getElementById('submit-btn-text');
+            
+            if (form) {
+                form.addEventListener('submit', async (event) => {
+                    event.preventDefault(); // Prevents standard page reloads
+
+                    // Inform user processing has begun
+                    submitBtn.textContent = "Sending...";
+                    submitBtn.disabled = true;
+                    feedback.style.color = "#1a73e8"; // Using standard theme blue highlight
+                    feedback.textContent = "Submitting your query...";
+
+                    // Automatically capture fields matching target "name" keys
+                    const formData = new FormData(form);
+                    const jsonObject = Object.fromEntries(formData.entries());
+                    const jsonString = JSON.stringify(jsonObject);
+
+                    try {
+                        const response = await fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: jsonString
+                        });
+
+                        const result = await response.json();
+
+                        if (response.status === 200) {
+                            feedback.style.color = "#2e7d32"; // Dark Success Green
+                            feedback.textContent = "Thank you! Your query has been submitted successfully.";
+                            form.reset(); // Wipe values clean
+                        } else {
+                            throw new Error(result.message || "Submission rejected by server.");
+                        }
+
+                    } catch (error) {
+                        console.error("Transmission Failure Details:", error);
+                        feedback.style.color = "#d32f2f"; // Error Red
+                        feedback.textContent = "Unable to process message. Please check your internet connection.";
+                    } finally {
+                        // Re-enable button states regardless of final network outcome
+                        submitBtn.textContent = "Send Message";
+                        submitBtn.disabled = false;
+                    }
                 });
             }
         });
