@@ -52,12 +52,18 @@ body {
 
 img {
     display: block;
-    max-width: 100%;
+    max-width: 200%;
+    color: #ffffff;
+    border-radius: 10px;
+    
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    color: white;
+    font-size: small;
+    font-family: Helvetica, sans-serif;
 }
 
 ul {
@@ -94,6 +100,7 @@ ul {
 .logo a {
     display: flex;
     align-items: center;
+    
 }
 
 .logo-img {
@@ -101,8 +108,9 @@ ul {
     width: auto;
 }
 
-.logo-img[src="assets/images/logo.png"]:not([src=""]) {
+.logo-img[src="assets/images.jpg"]:not([src=""]) {
     display: block;
+    
 }
 
 .nav-links {
@@ -257,7 +265,7 @@ ul {
 }
 
 .stat-number {
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     color: var(--blue);
@@ -272,14 +280,14 @@ ul {
     letter-spacing: 0.5px;
 }
 
-/* Responsive updates for the Stats Grid */
+/* Responsive updates for the Stats Grid 
 @media (max-width: 768px) {
     .stats-bar-container {
-        margin-top: 2rem; /* Removes the floating overlap on mobile to save vertical breathing room */
+        margin-top: 2rem; /* Removes the floating overlap on mobile to save vertical breathing room 
     }
     
     .stats-bar {
-        grid-template-columns: repeat(2, 1fr); /* Switches to a clean 2x2 grid on tablets/mobile */
+        grid-template-columns: repeat(2, 1fr); /* Switches to a clean 2x2 grid on tablets/mobile 
         gap: 24px 16px;
         padding: 24px 16px;
     }
@@ -287,10 +295,10 @@ ul {
 
 @media (max-width: 420px) {
     .stats-bar {
-        grid-template-columns: 1fr; /* Stacks into 1 single column on tiny smartphone screens */
+        grid-template-columns: 1fr; /* Stacks into 1 single column on tiny smartphone screens 
         gap: 20px;
     }
-}
+}*/
 /* ══════════════════════════════════════════════
    STATS BAR
    ══════════════════════════════════════════════ */
@@ -341,7 +349,7 @@ ul {
     text-transform: uppercase;
 }
 
-/* ── RESPONSIVE ───────────────────────────────── */
+/* ── RESPONSIVE ───────────────────────────────── 
 @media (max-width: 768px) {
     .stats-bar {
         display: grid;
@@ -368,7 +376,7 @@ ul {
     .stat-label {
         font-size: 0.75rem;
     }
-}
+}*/
 
 /* ══════════════════════════════════════════════
    HIGHLIGHTS MARQUEE & MODAL SPEC
@@ -586,19 +594,19 @@ ul {
     line-height: 1.5;
 }
 
-/* ── RESPONSIVE ADAPTATIONS FOR POPUP ── */
+/* ── RESPONSIVE ADAPTATIONS FOR POPUP ── 
 @media (max-width: 768px) {
     .modal-card {
         max-width: 500px;
     }
     
     .modal-info-wrap {
-        grid-template-columns: 1fr; /* Drop side-by-side view to clean vertical block stack */
+        grid-template-columns: 1fr; /* Drop side-by-side view to clean vertical block stack 
         min-height: auto;
     }
     
     .modal-img-col {
-        height: 200px; /* Fix image profile height box on mobile views */
+        height: 200px; /* Fix image profile height box on mobile views 
     }
     
     .modal-text-col {
@@ -606,10 +614,10 @@ ul {
     }
     
     .modal-close-trigger {
-        color: #94a3b8; /* Switch back to regular display gray close icon color */
+        color: #94a3b8; /* Switch back to regular display gray close icon color 
         text-shadow: none;
     }
-}
+}*/
 /* ══════════════════════════════════════════════
    SECTION 3 & 4 — SPLIT LAYOUT
    ══════════════════════════════════════════════ */
@@ -853,9 +861,9 @@ ul {
 
 /* ══════════════════════════════════════════════
    RESPONSIVE MEDIA QUERIES
-   ══════════════════════════════════════════════ */
+   ══════════════════════════════════════════════ 
 
-/* Tablets & Mobile Devices: ≤ 768px */
+/* Tablets & Mobile Devices: ≤ 768px 
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -879,7 +887,7 @@ ul {
         padding: 60px 16px;
     }
 
-    /* Stacks columns vertically and handles proper alignment flow */
+    /* Stacks columns vertically and handles proper alignment flow 
     .split-section {
         flex-direction: column;
         gap: 3rem;
@@ -895,7 +903,7 @@ ul {
         height: 300px;
     }
 
-    /* Stacks feature grid elements safely into 1 full-width column */
+    /* Stacks feature grid elements safely into 1 full-width column 
     .cards-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -911,11 +919,11 @@ ul {
     }
     
     .footer-divider {
-        display: none; /* Safely clears vertical divider symbols from vertical lists */
+        display: none; /* Safely clears vertical divider symbols from vertical lists 
     }
-}
+}*/
 
-/* Compact Mobile Displays: ≤ 420px */
+/* Compact Mobile Displays: ≤ 420px 
 @media (max-width: 420px) {
     .hero-overlay-content h1 {
         font-size: 1.75rem;
@@ -932,7 +940,7 @@ ul {
     .opportunities-list li {
         padding: 0.85rem 1rem;
     }
-}
+}*/
 
 
 /* ══════════════════════════════════════════════
@@ -1262,7 +1270,7 @@ ul {
     margin-bottom: 0;
 }
 
-/* ── ABOUT PAGE RESPONSIVE ────────────────────── */
+/* ── ABOUT PAGE RESPONSIVE ────────────────────── 
 @media (max-width: 768px) {
 
     .about-top-photo {
@@ -1307,7 +1315,7 @@ ul {
     .timeline {
         padding-left: 24px;
     }
-}
+}*/
 
 /* ══════════════════════════════════════════════
    COURSES PAGE
@@ -1640,7 +1648,7 @@ ul {
     color: var(--white);
 }
 
-/* ── COURSES RESPONSIVE ───────────────────────── */
+/* ── COURSES RESPONSIVE ───────────────────────── 
 @media (max-width: 768px) {
 
     .course-detail-grid {
@@ -1679,7 +1687,7 @@ ul {
     .course-badge {
         display: none;
     }
-}
+}*/
 
 /* ══════════════════════════════════════════════
    GALLERY PAGE
@@ -1953,7 +1961,7 @@ ul {
 .prev-btn { left: 16px; }
 .next-btn { right: 16px; }
 
-/* ── GALLERY RESPONSIVE ───────────────────────── */
+/* ── GALLERY RESPONSIVE ───────────────────────── 
 @media (max-width: 768px) {
     .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -1994,7 +2002,7 @@ ul {
         height: 50vh;
     }
 }
-
+*/
 /* ══════════════════════════════════════════════
    CONTACT PAGE
    ══════════════════════════════════════════════ */
@@ -2235,7 +2243,7 @@ ul {
     display: block;
 }
 
-/* ── CONTACT RESPONSIVE ───────────────────────── */
+/* ── CONTACT RESPONSIVE ───────────────────────── 
 @media (max-width: 992px) {
     .contact-container {
         grid-template-columns: 1fr;
@@ -2258,5 +2266,418 @@ ul {
 
     .map-wrapper iframe {
         height: 260px;
+    }
+}*/
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS — CONSOLIDATED
+   All screen-size adjustments live here, in one place, in order
+   from largest screen to smallest.
+   ════════════════════════════════════════════════════════════ */
+
+
+/* ───────────────────────────────────────────────
+   📺 LARGE DESKTOP / WIDE MONITORS — 1400px and up
+   ─────────────────────────────────────────────── */
+@media (min-width: 1400px) {
+
+    .navbar,
+    .split-section {
+        max-width: 1320px;       /* wider content container on big screens */
+    }
+
+    .side-photo {
+        height: 620px;
+    }
+}
+
+
+/* ───────────────────────────────────────────────
+   💻 STANDARD DESKTOP / LAPTOP — 1025px to 1399px
+   ─────────────────────────────────────────────── */
+@media (max-width: 1399px) and (min-width: 1025px) {
+
+    .split-section {
+        padding: 3.5rem 32px 4.5rem;
+        gap: 2rem;
+    }
+
+    .side-photo {
+        height: 520px;
+    }
+}
+
+
+/* ───────────────────────────────────────────────
+   📱 TABLET LANDSCAPE / SMALL LAPTOP — 769px to 1024px
+   (e.g. iPad landscape, small laptop screens)
+   ─────────────────────────────────────────────── */
+@media (max-width: 1024px) and (min-width: 769px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .nav-links {
+        gap: 4px;
+    }
+
+    .nav-links li a {
+        padding: 7px 13px;
+        font-size: 13.5px;
+    }
+
+    /* Hero */
+    .hero-card {
+        min-height: 55vh;
+        padding: 48px 24px;
+    }
+
+    /* Stats bar */
+    .stats-bar {
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        min-width: 160px;
+        padding: 1.5rem 1rem;
+    }
+
+    /* Split section (home page) */
+    .split-section {
+        gap: 2rem;
+        padding: 3rem 20px 4rem;
+    }
+
+    .side-photo {
+        height: 460px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* About Us page */
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Courses page */
+    .course-detail-grid {
+        grid-template-columns: 1fr 240px;
+    }
+
+    /* Contact page */
+    .contact-container {
+        gap: 2rem;
+    }
+
+    /* Gallery page */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+
+/* ───────────────────────────────────────────────
+   📱 TABLET PORTRAIT / LARGE PHONE — up to 768px
+   (e.g. iPad portrait, large Android phones)
+   ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+    /* Navbar — stacks logo above links, links wrap */
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 16px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .nav-links li a {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    /* Hero */
+    .hero-card {
+        min-height: 52vh;
+        padding: 44px 16px;
+    }
+
+    .hero-cta-btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    /* Stats bar — 2x2 grid */
+    .stats-bar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-item {
+        max-width: 100%;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.4rem 1rem;
+    }
+
+    /* Marquee cards — smaller width */
+    .marquee-card,
+    .highlight-card {
+        min-width: 240px;
+        max-width: 240px;
+        padding: 1.25rem 1.4rem;
+    }
+
+    .modal-box,
+    .modal-card {
+        max-width: 500px;
+        padding: 2rem 1.5rem;
+    }
+
+    .modal-info-wrap {
+        grid-template-columns: 1fr;   /* image stacks above text */
+        min-height: auto;
+    }
+
+    .modal-img-col {
+        height: 200px;
+    }
+
+    /* Split section (home page) — stack vertically */
+    .split-section {
+        flex-direction: column;
+        padding: 2.5rem 16px 3rem;
+        gap: 2rem;
+    }
+
+    .split-left {
+        gap: 2rem;
+    }
+
+    .split-right {
+        position: static;       /* unstick the photo */
+        width: 100%;
+    }
+
+    .side-photo {
+        height: 260px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;   /* feature cards: 1 column */
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    /* About Us page */
+    .about-top-photo {
+        height: 220px;
+    }
+
+    .mv-inner {
+        flex-direction: column;
+    }
+
+    .mv-divider {
+        width: 100%;
+        height: 1px;
+        margin: 0;
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .founder-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .founder-photo-wrap {
+        width: 140px;
+    }
+
+    .founder-photo {
+        width: 140px;
+        height: 155px;
+    }
+
+    .timeline {
+        padding-left: 24px;
+    }
+
+    /* Courses page */
+    .course-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-levels {
+        grid-template-columns: 1fr;
+    }
+
+    .accordion-left {
+        flex-wrap: wrap;
+    }
+
+    .mock-banner-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.25rem;
+    }
+
+    .mock-cta {
+        width: 100%;
+        text-align: center;
+    }
+
+    .approval-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Gallery page */
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+
+    .gallery-filters {
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .filter-btn {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+    }
+
+    .nav-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .prev-btn { left: 6px; }
+    .next-btn { right: 6px; }
+
+    .lightbox-content-container {
+        height: 60vh;
+    }
+
+    /* Contact page */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .contact-form-block,
+    .info-details {
+        padding: 1.75rem 1.5rem;
+    }
+
+    .map-wrapper iframe {
+        height: 280px;
+    }
+
+    /* Footer */
+    .footer-contact-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-divider {
+        display: none;          /* hide the "|" divider when stacked */
+    }
+}
+
+
+/* ───────────────────────────────────────────────
+   📱 MOBILE PHONE — up to 576px
+   (most Android & iPhone models in portrait)
+   ─────────────────────────────────────────────── */
+@media (max-width: 576px) {
+
+    .marquee-card,
+    .highlight-card {
+        min-width: 210px;
+        max-width: 210px;
+        padding: 1.1rem 1.2rem;
+    }
+
+    .modal-box,
+    .modal-card {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lightbox-content-container {
+        height: 50vh;
+    }
+
+    .contact-section {
+        padding: 3rem 16px;
+    }
+
+    .contact-form-block,
+    .info-details {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .map-wrapper iframe {
+        height: 260px;
+    }
+}
+
+
+/* ───────────────────────────────────────────────
+   📱 SMALL MOBILE — up to 420px
+   (e.g. iPhone SE, compact Android phones)
+   ─────────────────────────────────────────────── */
+@media (max-width: 420px) {
+
+    /* Navbar */
+    .nav-links li a {
+        padding: 5px 9px;
+        font-size: 12px;
+    }
+
+    /* Hero */
+    .side-photo {
+        height: 220px;
+    }
+
+    .opportunities-list li {
+        padding: 0.85rem 1rem;
+    }
+
+    /* Courses page */
+    .course-badge {
+        display: none;          /* too cramped on tiny screens */
+    }
+
+    .accordion-header {
+        padding: 1rem;
     }
 }
